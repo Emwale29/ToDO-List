@@ -49,16 +49,34 @@
         
         <form id="addForm">
             <div class="row">
-                <div class="col-lg-7 col-md-7 col-sm-7">
-                    <input type="text" onkeyup="toggleButton(this, 'submit')" class="form-control" id="item" placeholder="Enter task">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <input type="text" class="form-control" id="item" placeholder="Enter task" required>
                 </div>
-                <div class="col-lg-5 col-md-5 col-sm-5">
-                    <input type="datetime-local" class="form-control" id="alarm" />
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <input type="date" class="form-control" id="dueDate" />
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <select class="form-control" id="priority">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
                 </div>
             </div>
             <div class="row mt-2">
-                <div class="col-lg-7 col-md-7 col-sm-7">
-                    <input type="submit" class="btn btn-dark" id="submit" value="Submit" disabled>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <input type="text" class="form-control" id="category" placeholder="Category" />
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <textarea class="form-control" id="notes" placeholder="Notes" rows="1"></textarea>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <input type="datetime-local" class="form-control" id="alarm" />
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <input type="submit" class="btn btn-dark" id="submit" value="Submit">
                 </div>
             </div>
         </form>
@@ -67,4 +85,5 @@
         <ul class="list-group" id="items"></ul>
     </div>
 </body>
+
 </html>
